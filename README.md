@@ -1,6 +1,6 @@
 # Plateforme DevSecOps : Port de Nador
 <div align="center">
-<img width="730" height="342" alt="marsaMaroc" src="https://github.com/user-attachments/assets/6f49142a-fa13-4faf-a26e-68452a877b5f" />
+<img width="730" height="342" alt="marsaMaroc" src="https://github.com/user-attachments/assets/ec0163c9-37f9-4793-9774-d96d92560bf9" />
 
 </div>
 
