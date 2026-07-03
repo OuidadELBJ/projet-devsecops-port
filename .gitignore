@@ -1,0 +1,8 @@
+# Fichiers systèmes
+.DS_Store
+Thumbs.db
+
+# Dossiers de travail
+__pycache__/
+*.log
+.env
