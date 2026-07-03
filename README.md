@@ -1,4 +1,6 @@
 # Plateforme DevSecOps : Port de Nador
+<img width="730" height="342" alt="Capture_d_écran_2026-07-03_à_10 51 08-removebg-preview" src="https://github.com/user-attachments/assets/8e08be5f-bc3f-4ab1-9abc-540f85a9dff6" />
+
 
 Plateforme d'automatisation du cycle de développement applicatif du Port de Nador : intégration continue, déploiement continu et contrôles de sécurité intégrés à la chaîne CI/CD.
 
@@ -59,6 +61,8 @@ Développeur
                           Cluster Kubernetes
                         (namespaces dev / staging / prod)
 ```
+<img width="1200" height="848" alt="ar" src="https://github.com/user-attachments/assets/0379ebf9-8417-4aa1-804c-3fd1e3ea9e96" />
+
 
 Le pipeline construit une image Docker, l'analyse (qualité et sécurité), la publie dans un registre d'images, puis la déploie sur le cluster Kubernetes via des manifests (ou Helm charts) versionnés dans le dépôt.
 
@@ -75,8 +79,8 @@ Le pipeline construit une image Docker, l'analyse (qualité et sécurité), la p
 ### Environnement local (développement)
 
 ```bash
-git clone <url-du-depot>
-cd <nom-du-depot>
+git clone https://github.com/OuidadELBJ/projet-devsecops-port
+cd projet-devsecops-port
 
 docker compose up --build -d
 docker compose ps
