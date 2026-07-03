@@ -1,6 +1,7 @@
 # Plateforme DevSecOps : Port de Nador
-<img width="123" height="52" alt="marsaMaroc" src="https://github.com/user-attachments/assets/2ff9e901-f589-47df-9921-f55df363524b" />
-
+<div align="center">
+  <img width="123" height="52" alt="marsaMaroc" src="https://github.com/user-attachments/assets/2ff9e901-f589-47df-9921-f55df363524b" />
+</div>
 
 
 Plateforme d'automatisation du cycle de développement applicatif du Port de Nador : intégration continue, déploiement continu et contrôles de sécurité intégrés à la chaîne CI/CD.
