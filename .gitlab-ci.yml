@@ -3,27 +3,41 @@ stages:
   - test
   - security
 
-# 1. Build : Compilation et création du package
+# 1. Build : Compilation
 build-job:
   stage: build
   image: maven:3.9-eclipse-temurin-17
   script:
+    - cd src/demo-nador
     - mvn clean package -DskipTests
   artifacts:
     paths:
-      - target/*.jar
+      - src/demo-nador/target/*.jar
 
-# 2. Test : Exécution des tests unitaires
+# 2. Docker Build : Création de l'image (dépend du build)
+docker-build:
+  stage: build
+  image: docker:24.0.5
+  services:
+    - docker:24.0.5-dind
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  script:
+    - cd src/demo-nador
+    - docker build -t escale-app:latest .
+
+# 3. Test : Exécution des tests unitaires
 test-job:
   stage: test
   image: maven:3.9-eclipse-temurin-17
   script:
+    - cd src/demo-nador
     - mvn test
 
-# 3. Security : Scan de vulnérabilités (Préparation)
+# 4. Security : Scan autonome avec Trivy
 security-scan:
   stage: security
   image: aquasec/trivy:latest
   script:
     - trivy fs --exit-code 1 --severity CRITICAL .
-  allow_failure: true # On autorise l'échec pour le moment, le temps de configurer
+  allow_failure: false # On le met à false pour être sérieuse sur la sécurité
